@@ -304,7 +304,7 @@ async function projetarRota(){
 				}
 			}
 		}).then(function(value){
-			window.location.href = 'Principal.html';
+			window.location.href = 'index.html';
 		});
 }
 //------------------------------------------------------------------------------------------//--------------------------------------------------------------------------------
