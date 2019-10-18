@@ -57,7 +57,7 @@ function criarImagem(linha, coluna, src){
 //Declaração da funçao responsável por criar as imagens do aspirador de pó
 function imagemAspirador(){
 	var seletor = "#img_linha"+roboAspirador.linha+"_coluna"+roboAspirador.coluna;
-	$(seletor).attr("src", "imagens/bebe/bebeSujeira.jpg");
+	$(seletor).attr("src", "./imagens/bebe/bebeSujeira.jpg");
 }
 //------------------------------------------------------------------------------------------//--------------------------------------------------------------------------------
 //Declaração da funçao responsável por atualizar o contador que determina quantos comodôs ainda estão sujos
@@ -71,7 +71,7 @@ function aspirar(){
 	numeroMovimentos++;
 	quadro[roboAspirador.linha][roboAspirador.coluna].sujo = false;
 	seletor = "#img_linha"+roboAspirador.linha+"_coluna"+roboAspirador.coluna;
-	$(seletor).attr("src", "imagens/bebe/bebeLimpo.jpg");
+	$(seletor).attr("src", "./imagens/bebe/bebeLimpo.jpg");
 	for(i = 0; i < sujos.length; i++){
 		if(sujos[i].linha == roboAspirador.linha
 		&& sujos[i].coluna == roboAspirador.coluna)
@@ -145,10 +145,10 @@ function acionar(caminho){
 			var seletor = "";
 			if(roboAspirador.coluna < limite){
 				
-				atualizarMovimento("imagens/bebe/sujeiraTinta.jpg", "imagens/bebe/LaboratorioLimpo.jpg");
+				atualizarMovimento("./imagens/bebe/sujeiraTinta.jpg", "./imagens/bebe/LaboratorioLimpo.jpg");
 
 				roboAspirador.coluna++;
-				atualizarMovimento("imagens/bebe/bebeSujeira.jpg", "imagens/bebe/bebeLimpo.jpg");
+				atualizarMovimento("./imagens/bebe/bebeSujeira.jpg", "./imagens/bebe/bebeLimpo.jpg");
 			}
 			break;
 			
@@ -156,10 +156,10 @@ function acionar(caminho){
 			var limite = 0;
 			if(roboAspirador.coluna > limite){
 				
-				atualizarMovimento("imagens/bebe/sujeiraTinta.jpg", "imagens/bebe/LaboratorioLimpo.jpg");
+				atualizarMovimento("./imagens/bebe/sujeiraTinta.jpg", "./imagens/bebe/LaboratorioLimpo.jpg");
 
 				roboAspirador.coluna--;
-				atualizarMovimento("imagens/bebe/bebeSujeira.jpg", "imagens/bebe/bebeLimpo.jpg");
+				atualizarMovimento("./imagens/bebe/bebeSujeira.jpg", "./imagens/bebe/bebeLimpo.jpg");
 			}
 			break;
 			
